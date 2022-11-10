@@ -27,8 +27,13 @@ function App() {
 
       <div className='flex flex-1 w-full items-center justify-center overflow-hidden'>
         <div className='flex flex-1 h-full'>
-          <div className='flex flex-1'>
-
+          <div className='relative flex flex-1 flex-col justify-center mb-36 text-3xl'>
+            <div className='w-5/6 text-right'>
+              <h1>hello! i'm <span className='font-bold text-blue-500'>Caick</span>,</h1>
+              <h1>an innovative software developer</h1>
+              <h1>with focus on </h1>
+              <h1><span className='font-bold text-blue-500'>front-end</span> development</h1>
+            </div>
           </div>
 
           <div className='relative flex flex-1 items-center justify-center'>
