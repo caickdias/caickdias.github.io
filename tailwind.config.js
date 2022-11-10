@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       boxShadow: {
         'special-bg': 'inset 0px 0px 150px 50px rgba(0, 0, 0, 0.3)',
-        'special-social': '0px 20px 8px -13px rgba(0, 0, 0, 0.3)',
+        'special-social': '0px 0px 20px 2px rgba(0, 0, 0, 0.3)',
       }
     },
   },
