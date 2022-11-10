@@ -1,17 +1,19 @@
 import { useState } from 'react';
 
 import './App.css';
+import HeroAvatar from './components/HeroAvatar';
 
-import { ReactComponent as Linkedin } from './assets/linkedin.svg';
-import { ReactComponent as Github } from './assets/github.svg';
-import Navbar from './assets/components/Navbar';
+
+
+import Navbar from './components/Navbar/Navbar';
+import SocialMediaBar from './components/SocialMediaBar/SocialMediaBar';
 
 function App() {
 
-  const [shadowColor, setShadowColor] = useState('shadow-white');
+  const [shadowColor, setShadowColor] = useState('shadow-red-500');
 
   return (
-    <div className="App text-[#dfe4ea]">
+    <div className="App flex items-center flex-col text-[#dfe4ea]">
       
       <Navbar />
 
@@ -21,17 +23,19 @@ function App() {
         shadow-special-bg shadow-black'>
       </div>
 
-      <div className={`absolute left-0 right-0 bottom-0 mx-auto bg-slate-900
-        flex items-center justify-evenly
-        w-72 h-12 rounded-tl-3xl rounded-tr-3xl
-        shadow-special-social shadow-red-500 transition-all duration-300`}>        
-        
-        <Linkedin className='hover:scale-125 transition-all duration-300 ' />
-        <Github className='hover:scale-125 transition-all duration-300 ' />
-        <Linkedin className='hover:scale-125 transition-all duration-300 ' />
-        <Linkedin className='hover:scale-125 transition-all duration-300ml-12' />
-        
-        
+      <SocialMediaBar />      
+
+      <div className='flex flex-1 w-full items-center justify-center overflow-hidden'>
+        <div className='flex flex-1 h-full'>
+          <div className='flex flex-1'>
+
+          </div>
+
+          <div className='relative flex flex-1 items-center justify-center'>
+            <HeroAvatar />
+          </div>
+        </div>
+
       </div>
 
     </div>
