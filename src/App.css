@@ -13,3 +13,10 @@
   
 }
 
+.tattoo {
+  border-radius: 45% 55% 50% 50% / 50% 54% 46% 50% ;
+}
+
+.caick:hover .tattoo {
+  background-color: red;
+}
