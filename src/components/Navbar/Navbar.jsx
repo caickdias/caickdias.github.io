@@ -8,7 +8,7 @@ const Navbar = () => {
         w-full h-16
         flex items-center justify-between'>
         
-        <h1 className="text-center text-6xl flex-1 relative z-10 font-['Kolker_Brush']">
+        <h1 className="text-center text-[4rem] flex-1 relative z-10 font-['Kolker_Brush']">
             Caick Andrade
         </h1>
 
