@@ -3,6 +3,7 @@ import React from 'react'
 import NavItem from './NavItem';
 
 const Navbar = () => {
+
   return (
     <div className='relative z-10 py-12
         w-full h-16

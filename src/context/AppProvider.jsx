@@ -3,15 +3,19 @@ import { useState } from 'react';
 import AppContext from './AppContext';
 
 const AppProvider = ({ children }) => {
-    const [currentColor, setCurrentColor] = useState('bg-blue-500');
+    const [currentBgColor, setCurrentBgColor] = useState('bg-blue-500');
     const [currentShadowColor, setCurrentShadowColor] = useState('shadow-blue-500');
-    const [currentText, setCurrentText] = useState('text-blue-500');
+    const [currentTextColor, setCurrentTextColor] = useState('text-blue-500');
+    const [currentBorderColor, setCurrentBorderColor] = useState('border-blue-600');
+    const [currentHoverBorderColor, setCurrentHoverBorderColor] = useState('hover:border-blue-600');
 
     return (
         <AppContext.Provider value={{ 
-                currentColor, setCurrentColor, 
+                currentBgColor, setCurrentBgColor, 
                 currentShadowColor, setCurrentShadowColor, 
-                currentText, setCurrentText
+                currentTextColor, setCurrentTextColor,
+                currentBorderColor, setCurrentBorderColor,
+                currentHoverBorderColor, setCurrentHoverBorderColor
             }}>
             { children }
         </AppContext.Provider>
