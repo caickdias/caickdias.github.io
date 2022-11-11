@@ -12,11 +12,11 @@ const ColorPicker = () => {
             <button                     
                 style={{ backgroundColor: `${color}`, width: 20, height: 20}}
                 onClick={() => {
-                    setCurrentTextColor('text-red-500')
-                    setCurrentBorderColor('border-red-500');
-                    setCurrentHoverBorderColor('hover:border-red-500');
-                    setCurrentBgColor('bg-red-500');
-                    setCurrentShadowColor('shadow-red-500');
+                    setCurrentTextColor('text-orange-500')
+                    setCurrentBorderColor('border-orange-500');
+                    setCurrentHoverBorderColor('hover:border-orange-500');
+                    setCurrentBgColor('bg-orange-500');
+                    setCurrentShadowColor('shadow-orange-500');
                 }}
             >
                 

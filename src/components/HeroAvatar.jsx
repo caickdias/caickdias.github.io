@@ -35,15 +35,29 @@ const HeroAvatar = () => {
                 width={300}
                 src={require('../assets/caick-red.png')} alt="not found"
               />
-            
-
-            
+                        
               <img 
                 style={{ opacity: `${currentBgColor === 'bg-blue-500' ? 100 : 0}` }} 
                 className='absolute -bottom-0 top-0 right-0 left-0 m-auto             
                 transition-all duration-500' 
                 width={300}
-                src={require('../assets/caick.png')} alt="not found"
+                src={require('../assets/caick-blue.png')} alt="not found"
+              />
+
+              <img 
+                style={{ opacity: `${currentBgColor === 'bg-green-500' ? 100 : 0}` }} 
+                className='absolute -bottom-0 top-0 right-0 left-0 m-auto             
+                transition-all duration-500' 
+                width={300}
+                src={require('../assets/caick-green.png')} alt="not found"
+              />
+
+              <img 
+                style={{ opacity: `${currentBgColor === 'bg-orange-500' ? 100 : 0}` }} 
+                className='absolute -bottom-0 top-0 right-0 left-0 m-auto             
+                transition-all duration-500' 
+                width={300}
+                src={require('../assets/caick-orange.png')} alt="not found"
               />
             
 

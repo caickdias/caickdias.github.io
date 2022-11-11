@@ -1,21 +1,29 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
 
 import AppContext from './AppContext';
+import { AppReducer } from '../reducer/AppReducer';
+
+import { SET_THEME } from '../reducer/actions';
+
+const initialState = {
+    bgColor: 'bg-blue-500',
+    shadowColor: 'shadow-blue-500',
+    textColor: 'text-blue-500',
+    borderColor: 'border-blue-600',
+    hoverBorderColor: 'hover:border-blue-600',
+}
 
 const AppProvider = ({ children }) => {
-    const [currentBgColor, setCurrentBgColor] = useState('bg-blue-500');
-    const [currentShadowColor, setCurrentShadowColor] = useState('shadow-blue-500');
-    const [currentTextColor, setCurrentTextColor] = useState('text-blue-500');
-    const [currentBorderColor, setCurrentBorderColor] = useState('border-blue-600');
-    const [currentHoverBorderColor, setCurrentHoverBorderColor] = useState('hover:border-blue-600');
+    
+    const [store, dispatch] = useReducer(AppReducer, initialState);
+
+    const setTheme = color => {
+        dispatch({ type: SET_THEME, payload: { color } })
+    }
 
     return (
         <AppContext.Provider value={{ 
-                currentBgColor, setCurrentBgColor, 
-                currentShadowColor, setCurrentShadowColor, 
-                currentTextColor, setCurrentTextColor,
-                currentBorderColor, setCurrentBorderColor,
-                currentHoverBorderColor, setCurrentHoverBorderColor
+                store, setTheme
             }}>
             { children }
         </AppContext.Provider>
