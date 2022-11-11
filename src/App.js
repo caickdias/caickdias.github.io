@@ -10,7 +10,8 @@ import SocialMediaBar from './components/SocialMediaBar/SocialMediaBar';
 
 function App() {
 
-  const { currentTextColor } = useContext(AppContext);  
+  const { store } = useContext(AppContext);  
+  const { textColor } = store;
 
   return (
     <div className="App flex items-center flex-col text-[#dfe4ea]">
@@ -27,12 +28,13 @@ function App() {
 
       <div className='flex flex-1 w-full items-center justify-center overflow-hidden'>
         <div className='flex flex-1 h-full'>
+          
           <div className='relative flex flex-1 flex-col justify-center mb-36 text-3xl'>
             <div className='w-5/6 text-right'>
-              <h1>hello! i'm <span className={`font-bold text-4xl ${currentTextColor}`}>Caick</span>,</h1>
+              <h1>hello! i'm <span className={`font-bold text-4xl ${textColor} transition-all duration-300`}>Caick</span>,</h1>
               <h1>an innovative software developer</h1>
               <h1>with focus on </h1>
-              <h1><span className={`font-bold ${currentTextColor}`}>front-end</span> development</h1>
+              <h1><span className={`font-bold ${textColor} transition-all duration-300`}>front-end</span> development</h1>
             </div>
           </div>
 
