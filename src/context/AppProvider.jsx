@@ -3,9 +3,10 @@ import { useReducer } from 'react';
 import AppContext from './AppContext';
 import { AppReducer } from '../reducer/AppReducer';
 
-import { SET_THEME } from '../reducer/actions';
+import { SET_THEME } from '../utils/actions';
 
 const initialState = {
+    color: 'blue',
     bgColor: 'bg-blue-500',
     shadowColor: 'shadow-blue-500',
     textColor: 'text-blue-500',

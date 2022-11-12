@@ -2,7 +2,7 @@ import React from 'react'
 
 import NavItem from './NavItem';
 
-const Navbar = () => {
+const Navbar = ({ onChangePage }) => {
 
   return (
     <div className='relative z-10 py-12
@@ -14,10 +14,10 @@ const Navbar = () => {
         </h1>
 
         <div className='flex flex-1 items-center justify-evenly h-16 transition-all duration-300'>
-            <NavItem title="projects" />
-            <NavItem title="skills" />            
+            <NavItem onChangePage={onChangePage} title="projects" />
+            <NavItem onChangePage={onChangePage} title="skills" />            
             <NavItem title="blog" />
-            <NavItem title="about me" />
+            <NavItem onChangePage={onChangePage} title="about me" />
         </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import { SET_THEME } from './actions';
+import { SET_THEME } from '../utils/actions';
 
 export const AppReducer = (state, actions) => {
     const { type, payload }= actions;
@@ -17,6 +17,7 @@ const changeTheme = (color, state) => {
     switch(color){
         case 'blue':
             return {
+                color: 'blue',
                 bgColor: 'bg-blue-500',
                 shadowColor: 'shadow-blue-500',
                 textColor: 'text-blue-500',
@@ -25,6 +26,7 @@ const changeTheme = (color, state) => {
             };
         case 'red':
             return {
+                color: 'red',
                 bgColor: 'bg-red-500',
                 shadowColor: 'shadow-red-500',
                 textColor: 'text-red-500',
@@ -33,6 +35,7 @@ const changeTheme = (color, state) => {
             }
         case 'green':
             return {
+                color: 'green',
                 bgColor: 'bg-green-500',
                 shadowColor: 'shadow-green-500',
                 textColor: 'text-green-500',
@@ -41,6 +44,7 @@ const changeTheme = (color, state) => {
             };
         case 'orange':
             return {
+                color: 'orange',
                 bgColor: 'bg-orange-500',
                 shadowColor: 'shadow-orange-500',
                 textColor: 'text-orange-500',
