@@ -4,7 +4,7 @@ import './App.css';
 
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/pages/Home';
-import Projects from './components/pages/Projects';
+import Projects from './components/pages/Projects/Projects';
 import SocialMediaBar from './components/SocialMediaBar/SocialMediaBar';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      setShowHome(true);
+      setShowHome(false);
     }, 300);
   }, []);
 
