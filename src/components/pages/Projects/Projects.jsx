@@ -19,13 +19,13 @@ const Projects = () => {
         </div>
 
         <div className='flex flex-1 flex-row p-8 overflow-hidden'>          
-            <div className='flex flex-[3] pb-4 flex-wrap overflow-y-auto'>
-            {
-              projects.map(project => <Project data={project} />)
-            }            
+            <div className='flex flex-[3] pt-2 pl-8 pb-4 flex-wrap overflow-y-auto'>              
+              {
+                projects.map(project => <Project data={project} />)
+              }                  
             </div>          
 
-          <div className='flex flex-[2] bg-red-500'>
+          <div className='flex flex-[2]'>
 
           </div>
         </div>

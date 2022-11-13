@@ -6,7 +6,8 @@ export const projects = [
         external_links: {
             'Github': 'https://github.com/caickdias/divideai-public',
             'Download': 'https://linktr.ee/divideai',
-        }
+        },
+        thumbnail: 'divideai.png',
     },
     {
         name: 'Equation alarm clock',
@@ -15,7 +16,8 @@ export const projects = [
         external_links: {
             'Github': 'https://github.com/caickdias/alarm-clock',
             'Try it': 'https://caickdias.github.io/alarm-clock/'
-        }
+        },
+        thumbnail: 'alarmclock.png',
     },
     {
         name: 'URL Parser',
@@ -24,7 +26,8 @@ export const projects = [
         external_links: {
             'Github': 'https://github.com/caickdias/url-parser',
             'Try it': 'https://caickdias.github.io/url-parser/'
-        }
+        },
+        thumbnail: 'urlparser.png',
     },
     {
         name: 'Memory Game',
@@ -32,7 +35,8 @@ export const projects = [
         categories: ['react-native'],
         external_links: {
             'Github': 'https://github.com/caickdias/memory-game',
-        }
+        },
+        thumbnail: 'memorygame.png',
     },
     {
         name: 'Invoice generator',
@@ -40,7 +44,8 @@ export const projects = [
         categories: ['node'],
         external_links: {
             'Github': 'https://github.com/caickdias/invoice-generator',
-        }
+        },
+        thumbnail: 'invoice.png',
     },
     {
         name: 'Static site shell script',
@@ -48,7 +53,8 @@ export const projects = [
         categories: ['shell'],
         external_links: {
             'Github': 'https://github.com/caickdias/shell-script-static-site',
-        }
+        },
+        thumbnail: 'siteshell.png',
     },
     {
         name: 'Background generator',
@@ -56,7 +62,8 @@ export const projects = [
         categories: ['react'],
         external_links: {
             'Github': 'https://github.com/caickdias/background-generator'
-        }
+        },
+        thumbnail: 'backgroundgen.png',
     },
     {
         name: 'Pokemon API',
@@ -64,7 +71,8 @@ export const projects = [
         categories: ['react-native'],
         external_links: {
             'Github': 'https://github.com/caickdias/pokemon-api-practice',
-        }
+        },
+        thumbnail: 'pokemonapi.png',
     },
     {
         name: 'Discord bot',
@@ -72,7 +80,8 @@ export const projects = [
         categories: ['node'],
         external_links: {
             'Github': 'https://github.com/caickdias/godev-discord-bot',
-        }
+        },
+        thumbnail: 'discordbot.png',
     },
     {
         name: 'Blaze crash scrap',
@@ -80,7 +89,8 @@ export const projects = [
         categories: ['web-scraping'],
         external_links: {
             'Github': 'https://github.com/caickdias/blaze-crash-scrap',
-        }
+        },
+        thumbnail: 'blazecrash.png',
     },
     {
         name: 'Portfolio website',
@@ -88,7 +98,8 @@ export const projects = [
         categories: ['react'],
         external_links: {
             'Github': 'https://github.com/caickdias/portfolio',
-        }
+        },
+        thumbnail: 'portfolio.png',
     },
     {
         name: 'Dashboard archery',
@@ -96,7 +107,8 @@ export const projects = [
         categories: ['react'],
         external_links: {
             'Github': 'https://github.com/caickdias/dashboard-archery',
-        }
+        },
+        thumbnail: 'dashboardarchery.png',
     },
     {
         name: 'Dashboard archery API',
@@ -104,7 +116,8 @@ export const projects = [
         categories: ['rest-api', 'node'],
         external_links: {
             'Github': 'https://github.com/caickdias/crud-api-express-nedb-joi',
-        }
+        },
+        thumbnail: 'apidashboardarchery.png',
     },
     {
         name: 'Chess',
@@ -112,7 +125,8 @@ export const projects = [
         categories: ['react'],
         external_links: {
             'Github': 'https://github.com/caickdias/chess',
-        }
+        },
+        thumbnail: 'chess.png',
     },
     {
         name: 'Chess server socket.io',
@@ -120,7 +134,8 @@ export const projects = [
         categories: ['socketio'],
         external_links: {
             'Github': 'https://github.com/caickdias/chess-socket-io-server',
-        }
+        },
+        thumbnail: 'chesssocketio.png',
     },
     {
         name: 'Chat rooms',
@@ -128,6 +143,7 @@ export const projects = [
         categories: ['react', 'socketio'],
         external_links: {
             'Github': 'https://github.com/caickdias/socketio-rooms',
-        }
+        },
+        thumbnail: 'chatrooms.png',
     }
 ]
