@@ -9,6 +9,7 @@ const initialState = {
     color: 'blue',
     bgColor: 'bg-blue-500',
     shadowColor: 'shadow-blue-500',
+    hoverShadowColor: 'hover:shadow-blue-500',
     textColor: 'text-blue-500',
     borderColor: 'border-blue-600',
     hoverBorderColor: 'hover:border-blue-600',
