@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { categories } from '../../../data/categories/projects';
 import { projects } from '../../../data/projects';
@@ -7,6 +7,11 @@ import Category from './Category';
 import Project from './Project';
 
 const Projects = () => {
+
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+  const [selectedCategories, setSelectedCategories] = [''];
+
+
   return (
     <div 
         className='absolute flex flex-1 flex-col w-full h-full p-2 '
@@ -21,7 +26,13 @@ const Projects = () => {
         <div className='flex flex-1 flex-row p-8 overflow-hidden'>          
             <div className='flex flex-[2] pt-2 pl-8 pb-4 flex-wrap overflow-y-auto'>              
               {
-                projects.map(project => <Project data={project} />)
+                projects.map((project, index) => (
+                  <Project 
+                    selected={selectedProjectIndex === index} 
+                    data={project} 
+                    onClick={() => setSelectedProjectIndex(index)}
+                  />)
+                )
               }                  
             </div>          
 

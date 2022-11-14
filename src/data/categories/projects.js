@@ -1,9 +1,19 @@
+import { 
+    REACT, 
+    REACT_NATIVE,
+    NODE,
+    SHELL,
+    REST_API,
+    SOCKETIO,
+    WEB_SCRAPING 
+} from "../../utils/actions"
+
 export const categories = [
-    'react',
-    'react-native',
-    'node',
-    'shell',
-    'rest-api',
-    'socketio',
-    'web-scraping'
+    REACT,
+    REACT_NATIVE,
+    NODE,
+    SHELL,
+    REST_API,
+    SOCKETIO,
+    WEB_SCRAPING,
 ]
