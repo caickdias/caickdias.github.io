@@ -9,9 +9,12 @@ const Navbar = ({ onChangePage }) => {
         w-full h-16
         flex items-center justify-between'>
         
-        <h1 className="text-center text-[4rem] flex-1 relative z-10 font-['Kolker_Brush']">
+        <button 
+          className="text-center text-[4rem] flex-1 relative z-10 font-['Kolker_Brush']"
+          onClick={() => onChangePage('home')}
+          >
             Caick Andrade
-        </h1>
+        </button>
 
         <div className='flex flex-1 items-center justify-evenly h-16 transition-all duration-300'>
             <NavItem onChangePage={onChangePage} title="projects" />

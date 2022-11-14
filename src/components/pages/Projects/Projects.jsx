@@ -6,12 +6,14 @@ import { projects } from '../../../data/projects';
 import Category from './Category';
 import Project from './Project';
 
-const Projects = () => {
+const Projects = ({ visible }) => {
 
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);  
   const selectedProject = filteredProjects[selectedProjectIndex];
+
+  const isVisible = visible ? 0 : 1000;
 
   const handleCategorySelection = (category, action) => {
     if(action === 'add'){
@@ -38,10 +40,13 @@ const Projects = () => {
 
   return (
     <div 
-        className='absolute flex flex-1 flex-col w-full h-full p-2 '
-        style={{ transform: `translate(${0}px, 0)` }}                
+        className='absolute p-8 flex flex-1 items-center justify-center flex-col w-full h-full transition-all duration-500'        
+        style={{ transform: `translate(0, ${isVisible}px)` }}     
     >
-        <div className="flex items-center justify-center">
+        <div 
+          className="flex items-center justify-center transition-all duration-500" 
+          style={{ transform: `translate(0, -${isVisible*2}px)` }}                
+        >
         {
           categories.map(category => (
             <Category
@@ -54,7 +59,10 @@ const Projects = () => {
         }
         </div>
 
-        <div className='flex flex-1 flex-row p-8 overflow-hidden'>          
+        <div 
+          className='flex flex-1 flex-row p-8 overflow-hidden transition-all duration-500'           
+          style={{ transform: `translate(0, ${isVisible}px)` }}     
+        >          
             <div className='flex flex-[2] pt-2 pl-8 pb-4 flex-wrap overflow-y-auto'>              
               {
                 filteredProjects.map((project, index) => (

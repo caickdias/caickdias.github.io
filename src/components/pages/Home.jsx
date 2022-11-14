@@ -13,7 +13,8 @@ const Home = ({ visible }) => {
 
     return (
         <div 
-            className='absolute flex w-full h-full items-center justify-center overflow-hidden'            
+            className='absolute flex w-full h-full items-center justify-center overflow-hidden'
+            style={{ transform: `translate(-${isVisible*2}px, 0)` }}            
         >
             
             <div 

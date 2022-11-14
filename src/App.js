@@ -5,20 +5,21 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/pages/Home';
 import Projects from './components/pages/Projects/Projects';
+import Skills from './components/pages/Skills/Skills';
 import SocialMediaBar from './components/SocialMediaBar/SocialMediaBar';
 
 function App() {
   
-  const [showHome, setShowHome] = useState(false);
+  const [currentPage, setCurrentPage] = useState('');
 
   useEffect(() => {
     setTimeout(() => {
-      setShowHome(false);
+      setCurrentPage('skills');
     }, 300);
   }, []);
 
   const handlePageChange = page => {
-    setShowHome(!showHome);
+    setCurrentPage(page);
   }
 
   return (
@@ -36,8 +37,9 @@ function App() {
 
         <SocialMediaBar />      
 
-        <Home visible={showHome} />
-        <Projects />
+        <Home visible={currentPage === 'home'} />
+        <Projects visible={currentPage === 'projects'} />
+        <Skills visible={currentPage === 'skills'} />
       </div>
     </div>
   );
