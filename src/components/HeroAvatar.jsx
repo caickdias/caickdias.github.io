@@ -36,11 +36,11 @@ const HeroAvatar = () => {
   }, []);
 
   useEffect(() => {
-    console.log(globalCoords)
+    //console.log(globalCoords)
   }, [globalCoords])
 
   const handleMouseMove = event => {
-      console.log(`x: ${event.clientX} y: ${event.clientY}`);      
+      //console.log(`x: ${event.clientX} y: ${event.clientY}`);      
       
       setCoords({
           x: event.clientX - event.target.offsetLeft,
@@ -53,7 +53,7 @@ const HeroAvatar = () => {
         <div 
           ref={el => {
             if(!el) return;
-            console.log(el.getBoundingClientRect().y);
+            //console.log(el.getBoundingClientRect().y);
           }}
           onMouseMove={handleMouseMove}
           className={`absolute bottom-[7rem] top-0 right-32 left-0 m-auto 
