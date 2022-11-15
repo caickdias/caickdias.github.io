@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      setCurrentPage('skills');
+      setCurrentPage('home');
     }, 300);
   }, []);
 

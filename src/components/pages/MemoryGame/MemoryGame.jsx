@@ -75,13 +75,12 @@ const MemoryGame = () => {
             UNLOCKED SKILLS
           </h1>
           {
-            revealedCards.map(skill => {
-              console.log(skill)
-              return <div>
+            revealedCards.map(skill => {              
+              return <div key={skill.name}>
                 <p className='mt-1'>{skill.name}</p>
                 {
                   skill?.subskills?.map(subskill => 
-                    <p className={`ml-4 pl-2 text-gray-400 text-sm border-l-2 ${borderColor}`}>{subskill}</p>
+                    <p key={subskill} className={`ml-4 pl-2 text-gray-400 text-sm border-l-2 ${borderColor}`}>{subskill}</p>
                   )
                 }
               </div>

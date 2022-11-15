@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext, useEffect, useMemo } from 'react'
 
 import AppContext from '../context/AppContext';
 
@@ -12,8 +12,11 @@ const HeroAvatar = () => {
   const { bgColor, borderColor } = store;
   const [showColorPicker, setShowColorPicker] = useState(false);
   
-  const [coords, setCoords] = useState({ x:0, y:0 });
   const [globalCoords, setGlobalCoords] = useState({ x:0, y:0 });
+  const [imageCoords, setImageCoords] = useState({ x:0, y:0 });  
+  const [rotation, setRotation] = useState(90);
+
+
 
   const handleThemeChange = color => {
     setShowColorPicker(false);
@@ -27,7 +30,7 @@ const HeroAvatar = () => {
             y: event.screenY,
         });            
     }
-
+    
     window.addEventListener('mousemove', handleWindowMouseMove);
 
     return () => {
@@ -36,33 +39,57 @@ const HeroAvatar = () => {
   }, []);
 
   useEffect(() => {
-    //console.log(globalCoords)
+    const r1 = { x: globalCoords.x - imageCoords.x, y: globalCoords.y - imageCoords.y }
+    const r2 = { x: 10, y: 0 }
+
+    const m1 = r1.x * r2.x;
+    const m2 = r1.y * r2.y;
+
+    const n1 = Math.sqrt(r1.x*r1.x + r1.y*r1.y);
+    const n2 = Math.sqrt(r2.x*r2.x + r2.y*r2.y);
+
+    const result = (m1+m2)/(n1*n2);
+    const angle = (Math.acos(result) * 180 / Math.PI);
+
+    console.log(Math.floor(angle));
+    setRotation(Math.floor(360 - angle + 13))
+
   }, [globalCoords])
 
-  const handleMouseMove = event => {
-      //console.log(`x: ${event.clientX} y: ${event.clientY}`);      
-      
-      setCoords({
-          x: event.clientX - event.target.offsetLeft,
-          y: event.clientY - event.target.offsetTop,
-      })
-  }
-
+  
   return (
     <div>                        
         <div 
           ref={el => {
             if(!el) return;
-            //console.log(el.getBoundingClientRect().y);
-          }}
-          onMouseMove={handleMouseMove}
+            const width = el.getBoundingClientRect().width; 
+            const height = el.getBoundingClientRect().height; 
+            const x = el.getBoundingClientRect().x + (width/2)
+            const y = el.getBoundingClientRect().y + (height/1.5)
+                        
+            setImageCoords(prev => {
+              if(prev.x === x && prev.y === y) return prev;
+              return { x, y }
+            })
+          }}          
           className={`absolute bottom-[7rem] top-0 right-32 left-0 m-auto 
             w-96 h-96 
-            overflow-hidden transition-all duration-300 
+            overflow-hidden 
             rounded-full caick
-            border-b-8 ${borderColor} border-dotted
+            scale-75 xl:scale-100
         `}>            
-            
+            <div className={`absolute bottom-[7rem] top-0 right-32 left-0 
+              w-96 h-96 
+              overflow-hidden transition-all duration-300 
+              rounded-full caick
+              border-r-8 ${borderColor} z-20 border-dotted scale-75 xl:scale-100`}
+              style={{
+                transform: `rotate(${rotation}deg)`
+              }}
+            >
+
+            </div>
+
             <button className='absolute -top-6 bottom-0 left-0 -right-4 m-auto 
               z-30 w-[1.1rem] h-[1.1rem] tattoo 
               opacity-40 transition-all duration-300'
