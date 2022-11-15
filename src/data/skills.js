@@ -60,13 +60,13 @@ export const skills = [
         name: 'Node',        
         icon: FaNode,
         color: '#56A342',
-        subskills: ['Rest API']
+        subskills: ['Express', 'Socket.io', 'Rest API']
     },
     {
-        name: 'Github',
+        name: 'Git',
         icon: FaGitAlt,
         color: '#E44C30',
-        subskills: ['Rest API']
+        subskills: ['Github']
     },
 
 
