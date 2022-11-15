@@ -13,7 +13,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
+<a target="_blank" href="https://icons8.com/icon/wPohyHO_qO1a/react">React</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\

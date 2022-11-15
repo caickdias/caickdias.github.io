@@ -17,7 +17,7 @@ const initialState = {
 
 const AppProvider = ({ children }) => {
     
-    const [store, dispatch] = useReducer(AppReducer, initialState);
+    const [store, dispatch] = useReducer(AppReducer, initialState);    
 
     const setTheme = color => {
         dispatch({ type: SET_THEME, payload: { color } })

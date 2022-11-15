@@ -54,7 +54,7 @@ const changeTheme = (color, state) => {
                 textColor: 'text-orange-500',
                 borderColor: 'border-orange-600',
                 hoverBorderColor: 'hover:border-orange-600',
-            }
+            }        
         default:
             return {
                 ...state,

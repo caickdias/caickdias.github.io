@@ -9,17 +9,17 @@ const Home = ({ visible }) => {
     const { store } = useContext(AppContext);
     const { textColor } = store;
     
-    const isVisible = visible ? 0 : 1000;
+    const isVisible = visible ? 0 : 300;
 
     return (
         <div 
-            className='absolute flex w-full h-full items-center justify-center overflow-hidden'
-            style={{ transform: `translate(-${isVisible*2}px, 0)` }}            
+            className='absolute flex w-full h-full items-center justify-center overflow-hidden transition-all duration-500'
+            style={{ transform: `translate(${isVisible*10}px, 0)` }}            
         >
             
             <div 
-                className='relative flex flex-1 flex-col justify-center mb-36 text-3xl transition-all duration-500'
-                style={{ transform: `translate(-${isVisible}px, 0)` }}
+                className='flex flex-1 flex-col justify-center mb-36 text-3xl transition-all duration-500'
+                style={{ transform: `translate(-${isVisible*20}px, 0)` }}
             >
                 <div className='w-5/6 text-right'>
                 <h1>hello! i'm <span className={`font-bold text-4xl ${textColor} transition-all duration-300`}>Caick</span>,</h1>
@@ -30,7 +30,7 @@ const Home = ({ visible }) => {
             </div>
 
             <div
-                className='relative flex flex-1 mb-36 items-center justify-center transition-all duration-500'
+                className='flex flex-1 mb-36 items-center justify-center transition-all duration-500'
                 style={{ transform: `translate(${isVisible}px, 0)` }} 
             >
                 <HeroAvatar />
