@@ -100,7 +100,7 @@ const Projects = ({ visible }) => {
               {
                 selectedProject && 
                 Object.entries(selectedProject?.external_links)?.map(([name, link]) => {
-                  return <a className='underline text-blue-400 font-' href={link} target="_blank" rel="noreferrer" >{name}</a> 
+                  return <a key={link} className='underline text-blue-400 font-' href={link} target="_blank" rel="noreferrer" >{name}</a> 
                 })
               }
               </div>

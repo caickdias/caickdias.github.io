@@ -1,36 +1,23 @@
 import React, { useEffect, useState } from 'react'
 
-import { FaReact } from 'react-icons/fa';
-
-const Card = ({ face='down', skill }) => {
+const Card = ({ face, skill, onClick }) => {
 
     const { name, icon: Icon, color } = skill;
 
     const bgImageLink = 'https://www.transparenttextures.com/patterns/diagmonds-light.png';
 
     const [cardFace, setCardFace] = useState(face);
-    const [isVisible, setIsVisible] = useState(cardFace === 'up' ? 100 : 0);
+    const [isVisible, setIsVisible] = useState(face === 'up' ? 100 : 0);
     const [backgroundImage, setBackgroundImage] = useState(cardFace === 'up' ? '' : bgImageLink);
     
-    const rotation = cardFace === 'up' ? 0 : 180; 
+    const rotation = face === 'up' ? 0 : 180; 
 
-    const handleCardRotation = () => {        
-        if(cardFace === 'up'){
-            setCardFace('down');
-        } else {
-            setCardFace('up');
-        }
+    useEffect(() => {
         setTimeout(() => {
-            if(cardFace === 'down'){
-                setBackgroundImage('');
-                setIsVisible(100);
-            } else {
-                setBackgroundImage(bgImageLink);
-                setIsVisible(0);
-            }            
+            setIsVisible(face === 'up' ? 100 : 0);
+            setBackgroundImage(face === 'up' ? '' : bgImageLink);            
         }, 150);
-    }
-
+    },[face]);
 
     return (
         <button 
@@ -39,7 +26,7 @@ const Card = ({ face='down', skill }) => {
                 backgroundImage: `url(${backgroundImage})`,
                 transform: `rotateY(${-rotation}deg)`
             }}
-            onClick={handleCardRotation}
+            onClick={onClick}
         >
             <div className='' style={{ opacity: `${isVisible}` }}>
                 <Icon fill={color} size={34} />
