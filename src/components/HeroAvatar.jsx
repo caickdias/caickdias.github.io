@@ -41,6 +41,8 @@ const HeroAvatar = () => {
   useEffect(() => {
     const r1 = { x: globalCoords.x - imageCoords.x, y: globalCoords.y - imageCoords.y }
     const r2 = { x: 10, y: 0 }
+    const adjust1 = r1.y < 0 ? 1 : -1;
+    const adjust2 = r1.y < 0 ? 0 : 360;
 
     const m1 = r1.x * r2.x;
     const m2 = r1.y * r2.y;
@@ -50,11 +52,10 @@ const HeroAvatar = () => {
 
     const result = (m1+m2)/(n1*n2);
     const angle = (Math.acos(result) * 180 / Math.PI);
+    
+    setRotation(Math.floor(360 - angle - 2) * adjust1 + adjust2);
 
-    console.log(Math.floor(angle));
-    setRotation(Math.floor(360 - angle + 13))
-
-  }, [globalCoords])
+  }, [globalCoords]);
 
   
   return (
