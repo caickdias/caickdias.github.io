@@ -4,6 +4,7 @@ import { categories } from '../../../data/categories/projects';
 import { projects } from '../../../data/projects';
 
 import Category from './Category';
+import Preview from './Preview';
 import Project from './Project';
 
 const Projects = ({ visible }) => {
@@ -76,37 +77,7 @@ const Projects = ({ visible }) => {
               }                  
             </div>          
 
-          <div className='flex flex-[2] flex-col'>
-            <div className='flex items-center justify-center w-full h-1/2'>
-            {
-              filteredProjects.length > 0 &&
-              <img             
-                className='max-h-full'    
-                src={require(`../../../assets/thumbnails/${selectedProject?.thumbnail || 'not_found.jpg'}`)} 
-                alt='not found'
-                />
-            }
-            </div>
-
-            <div className='flex flex-col items-center justify-center p-4 text-gray-400'>
-              <h1 className='font-bold text-xl text-[#dfe4ea]'>{selectedProject?.name}</h1>
-              <h1 className='text-base'>{selectedProject?.description}</h1>              
-              <span className='m-4'>
-                Categories: [ {
-                  <span> {selectedProject?.categories.join(', ').replace('-', ' ')}</span>                  
-                } ]
-              </span>
-              <div className='flex justify-evenly items-center w-full'>
-              {
-                selectedProject && 
-                Object.entries(selectedProject?.external_links)?.map(([name, link]) => {
-                  return <a key={link} className='underline text-blue-400 font-' href={link} target="_blank" rel="noreferrer" >{name}</a> 
-                })
-              }
-              </div>
-            </div>
-
-          </div>
+          <Preview project={selectedProject} />
         </div>
 
     </div>

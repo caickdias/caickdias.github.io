@@ -18,6 +18,9 @@ export const projects = [
             'Download': 'https://linktr.ee/divideai',
         },
         thumbnail: 'divideai.png',
+        media: [
+            'divideaí.gif'
+        ]
     },
     {
         name: 'Equation alarm clock',
