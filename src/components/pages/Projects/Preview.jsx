@@ -95,7 +95,12 @@ const MediaPlayer = ({ media, path }) => {
         <FaChevronLeft className='hover:scale-125 transition-all duration-300' size={32}/>
       </button>
 
-      <div className='flex items-center justify-center h-full'>
+      <a 
+        className='flex items-center justify-center h-full'
+        href={require(`../../../assets/projects/${path}/${mediaName}`)}
+        target="_blank" 
+        rel="noreferrer"
+      >
       { 
         mediaName !== '' && (                             
         selectedMedia?.type === 'video' ? 
@@ -104,15 +109,15 @@ const MediaPlayer = ({ media, path }) => {
               src={require(`../../../assets/projects/${path}/${mediaName}`)} 
               alt='not found'                
             />            
-        :
+        :        
         <img 
-          className='max-h-full'
+          className='max-h-full'            
           src={require(`../../../assets/projects/${path}/${mediaName}`)} 
           alt='not found' 
-        />                
+        />         
         )
       }
-      </div>
+      </a>
 
       <button
         onClick={() => handleMediaChange('next')}
