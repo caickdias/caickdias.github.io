@@ -19,8 +19,9 @@ export const projects = [
         },
         thumbnail: 'divideai.png',
         media: [
-            'divideaí.gif'
-        ]
+            'divideai.mp4',
+            'divideaí.gif',
+        ],
     },
     {
         name: 'Equation alarm clock',
@@ -31,6 +32,9 @@ export const projects = [
             'Try it': 'https://caickdias.github.io/alarm-clock/'
         },
         thumbnail: '',
+        media: [
+            'divideaí.gif'
+        ],
     },
     {
         name: 'URL Parser',
@@ -41,6 +45,9 @@ export const projects = [
             'Try it': 'https://caickdias.github.io/url-parser/'
         },
         thumbnail: '',
+        media: [
+            'divideaí.gif'
+        ],
     },
     {
         name: 'Memory Game',
@@ -50,6 +57,9 @@ export const projects = [
             'Github': 'https://github.com/caickdias/memory-game',
         },
         thumbnail: '',
+        media: [
+            'divideaí.gif'
+        ],
     },
     {
         name: 'Invoice generator',
@@ -59,6 +69,9 @@ export const projects = [
             'Github': 'https://github.com/caickdias/invoice-generator',
         },
         thumbnail: '',
+        media: [
+            'divideaí.gif'
+        ],
     },
     {
         name: 'Static site shell script',
@@ -68,6 +81,9 @@ export const projects = [
             'Github': 'https://github.com/caickdias/shell-script-static-site',
         },
         thumbnail: '',
+        media: [
+            'divideaí.gif'
+        ],
     },
     {
         name: 'Background generator',
@@ -77,6 +93,9 @@ export const projects = [
             'Github': 'https://github.com/caickdias/background-generator'
         },
         thumbnail: '',
+        media: [
+            'divideaí.gif'
+        ],
     },
     {
         name: 'Pokemon API',
@@ -86,6 +105,9 @@ export const projects = [
             'Github': 'https://github.com/caickdias/pokemon-api-practice',
         },
         thumbnail: '',
+        media: [
+            'divideaí.gif'
+        ],
     },
     {
         name: 'Discord bot',
@@ -95,6 +117,9 @@ export const projects = [
             'Github': 'https://github.com/caickdias/godev-discord-bot',
         },
         thumbnail: '',
+        media: [
+            'divideaí.gif'
+        ],
     },
     {
         name: 'Blaze crash scrap',
@@ -104,6 +129,9 @@ export const projects = [
             'Github': 'https://github.com/caickdias/blaze-crash-scrap',
         },
         thumbnail: '',
+        media: [
+            'divideaí.gif'
+        ],
     },
     {
         name: 'Portfolio website',
@@ -113,6 +141,9 @@ export const projects = [
             'Github': 'https://github.com/caickdias/portfolio',
         },
         thumbnail: '',
+        media: [
+            'divideaí.gif'
+        ],
     },
     {
         name: 'Dashboard archery',
@@ -122,6 +153,9 @@ export const projects = [
             'Github': 'https://github.com/caickdias/dashboard-archery',
         },
         thumbnail: '',
+        media: [
+            'divideaí.gif'
+        ],
     },
     {
         name: 'Dashboard archery API',
@@ -131,6 +165,9 @@ export const projects = [
             'Github': 'https://github.com/caickdias/crud-api-express-nedb-joi',
         },
         thumbnail: '',
+        media: [
+            'divideaí.gif'
+        ],
     },
     {
         name: 'Chess',
@@ -140,6 +177,9 @@ export const projects = [
             'Github': 'https://github.com/caickdias/chess',
         },
         thumbnail: '',
+        media: [
+            'divideaí.gif'
+        ],
     },
     {
         name: 'Chess server socket.io',
@@ -149,6 +189,9 @@ export const projects = [
             'Github': 'https://github.com/caickdias/chess-socket-io-server',
         },
         thumbnail: '',
+        media: [
+            'divideaí.gif'
+        ],
     },
     {
         name: 'Chat rooms',
@@ -158,5 +201,8 @@ export const projects = [
             'Github': 'https://github.com/caickdias/socketio-rooms',
         },
         thumbnail: '',
+        media: [
+            'divideaí.gif'
+        ],
     }
 ]

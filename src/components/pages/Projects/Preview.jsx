@@ -1,21 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
-const Preview = ({ project }) => {
-   
+const Preview = ({ project }) => {     
+    
+  const media = project?.media[0];  
+  console.log(media);
+
+  const selectedMedia = {
+    name: '',
+    type: 'video'
+  }
+
   return (
     <div className='flex flex-[2] flex-col'>
-            <div className='flex items-center justify-center w-full h-1/2'>
-            {              
-              <video controls            
-                className='max-h-full'    
-                src={require(`../../../assets/projects/divideai/divideai.mp4`)} 
-                alt='not found'                
-              />
-            }
-            </div>
+           
 
-            <div className='flex flex-col items-center justify-center p-4 text-gray-400'>
-              
+            <MediaPlayer media={selectedMedia} />
+
+            <div className='flex flex-col items-center justify-center p-4 text-gray-400'>              
+
               <Title title={project?.name || ''} />
               
               <Description text={project?.description || ''} />
@@ -25,7 +28,7 @@ const Preview = ({ project }) => {
               <div className='flex justify-evenly items-center w-full'>
               {
                 project && 
-                Object.entries(project?.external_links)?.map(([name, link]) => <Link name={name} link={link} />)
+                Object.entries(project?.external_links)?.map(([name, link]) => <Link key={link} name={name} link={link} />)
               }
               </div>
             </div>
@@ -65,6 +68,38 @@ const Link = ({ name, link }) => {
     rel="noreferrer" >
       {name}
     </a>
+}
+
+const MediaPlayer = ({ media }) => {
+  return ( 
+    <div className='flex px-8 items-center justify-evenly w-full h-1/2'>
+      <button>
+        <FaChevronLeft className='hover:scale-125 transition-all duration-300' size={32}/>
+      </button>
+
+      <div className='flex items-center justify-center h-full'>
+      {                              
+        media?.type === 'video' ? 
+        <video controls         
+              className='max-h-full'
+              src={require(`../../../assets/projects/divideai/divideai.mp4`)} 
+              alt='not found'                
+            />            
+        :
+        <img 
+          className='max-h-full'
+          src={require(`../../../assets/projects/divideai/${false || 'divideai.gif'}`)} 
+          alt='not found' 
+        />                
+        
+      }
+      </div>
+
+      <button>
+        <FaChevronRight className='hover:scale-125 transition-all duration-300' size={32} />
+      </button>
+    </div>
+  )
 }
 
 export default Preview
