@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 
 import AppContext from '../../../context/AppContext';
 
-const Project = ({ data, selected, onClick }) => {
+const Thumbnail = ({ data, selected, onClick }) => {
   
     const { store } = useContext(AppContext);
     const { textColor, shadowColor, hoverShadowColor } = store;
@@ -28,4 +28,4 @@ const Project = ({ data, selected, onClick }) => {
     )
 }
 
-export default Project
+export default Thumbnail

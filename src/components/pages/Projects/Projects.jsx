@@ -5,7 +5,7 @@ import { projects } from '../../../data/projects';
 
 import Category from './Category';
 import Preview from './Preview';
-import Project from './Project';
+import Thumbnail from './Thumbnail';
 
 const Projects = ({ visible }) => {
 
@@ -67,7 +67,7 @@ const Projects = ({ visible }) => {
             <div className='flex flex-[2] pt-2 pl-8 pb-4 flex-wrap overflow-y-auto'>              
               {
                 filteredProjects.map((project, index) => (
-                  <Project 
+                  <Thumbnail 
                     key={index}
                     selected={selectedProjectIndex === index} 
                     data={project} 

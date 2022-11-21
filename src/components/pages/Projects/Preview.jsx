@@ -1,39 +1,30 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
 const Preview = ({ project }) => {     
     
-  const media = project?.media[0];  
-  console.log(media);
-
-  const selectedMedia = {
-    name: '',
-    type: 'video'
-  }
-
-  return (
+    return (
     <div className='flex flex-[2] flex-col'>
            
+      <MediaPlayer media={project?.media || []} path={project?.path} />
 
-            <MediaPlayer media={selectedMedia} />
+      <div className='flex flex-col items-center justify-center p-4 text-gray-400'>              
 
-            <div className='flex flex-col items-center justify-center p-4 text-gray-400'>              
+        <Title title={project?.name || ''} />
+        
+        <Description text={project?.description || ''} />
+            
+        <Categories categories={project?.categories || []} />
 
-              <Title title={project?.name || ''} />
-              
-              <Description text={project?.description || ''} />
-                  
-              <Categories categories={project?.categories || []} />
+        <div className='flex justify-evenly items-center w-full'>
+        {
+          project && 
+          Object.entries(project?.external_links)?.map(([name, link]) => <Link key={link} name={name} link={link} />)
+        }
+        </div>
+      </div>
 
-              <div className='flex justify-evenly items-center w-full'>
-              {
-                project && 
-                Object.entries(project?.external_links)?.map(([name, link]) => <Link key={link} name={name} link={link} />)
-              }
-              </div>
-            </div>
-
-          </div>
+    </div>
   )
 
   
@@ -70,32 +61,62 @@ const Link = ({ name, link }) => {
     </a>
 }
 
-const MediaPlayer = ({ media }) => {
+const MediaPlayer = ({ media, path }) => {
+
+  const [index, setIndex] = useState(0);
+  const mediaName = media[index] || '';
+  const MIN_INDEX = 0;
+  const MAX_INDEX = media.length - 1;
+  const [selectedMedia, setSelectedMedia] = useState({});
+
+  useEffect(() => {
+    const extension = mediaName.split('.');
+    const type = extension[1] === 'mp4' ? 'video' : 'other';
+  
+    setSelectedMedia({ mediaName, type});
+  
+  }, [media, index]);
+
+  const handleMediaChange = action => {
+    let newIndex = 0;
+    if(action === 'prev'){
+      newIndex = Math.min(Math.max(index-1, MIN_INDEX), MAX_INDEX);
+    } else if(action === 'next'){
+      newIndex = Math.min(Math.max(index+1, MIN_INDEX), MAX_INDEX);      
+    }
+    setIndex(newIndex);
+  }
+
   return ( 
-    <div className='flex px-8 items-center justify-evenly w-full h-1/2'>
-      <button>
+    <div className='flex px-8 items-center justify-evenly w-full h-3/5'>
+      <button
+        onClick={() => handleMediaChange('prev')}
+      >
         <FaChevronLeft className='hover:scale-125 transition-all duration-300' size={32}/>
       </button>
 
       <div className='flex items-center justify-center h-full'>
-      {                              
-        media?.type === 'video' ? 
+      { 
+        mediaName !== '' && (                             
+        selectedMedia?.type === 'video' ? 
         <video controls         
               className='max-h-full'
-              src={require(`../../../assets/projects/divideai/divideai.mp4`)} 
+              src={require(`../../../assets/projects/${path}/${mediaName}`)} 
               alt='not found'                
             />            
         :
         <img 
           className='max-h-full'
-          src={require(`../../../assets/projects/divideai/${false || 'divideai.gif'}`)} 
+          src={require(`../../../assets/projects/${path}/${mediaName}`)} 
           alt='not found' 
         />                
-        
+        )
       }
       </div>
 
-      <button>
+      <button
+        onClick={() => handleMediaChange('next')}
+      >
         <FaChevronRight className='hover:scale-125 transition-all duration-300' size={32} />
       </button>
     </div>

@@ -11,6 +11,7 @@ import {
 export const projects = [
     {
         name: 'Divide aí!',
+        path: 'divideai',
         description: 'Mobile app for splitting group bills',
         categories: [REACT_NATIVE],
         external_links: {
@@ -18,13 +19,18 @@ export const projects = [
             'Download': 'https://linktr.ee/divideai',
         },
         thumbnail: 'divideai.png',
-        media: [
-            'divideai.mp4',
-            'divideaí.gif',
+        media: [            
+            'divideai.gif',
+            'home-no-table.png',
+            'create-table.png',
+            'current-table-items.png',
+            'add-item.png',
+            'who-paid.png',
         ],
     },
     {
         name: 'Equation alarm clock',
+        path: 'alarmclock',
         description: 'An alarm clock where you have to solve given equation to turn it off',
         categories: [REACT],
         external_links: {
@@ -33,11 +39,11 @@ export const projects = [
         },
         thumbnail: '',
         media: [
-            'divideaí.gif'
         ],
     },
     {
         name: 'URL Parser',
+        path: 'urlparser',
         description: 'Paste your URL and the app will parse its information',
         categories: [REACT],
         external_links: {
@@ -46,11 +52,11 @@ export const projects = [
         },
         thumbnail: '',
         media: [
-            'divideaí.gif'
         ],
     },
     {
         name: 'Memory Game',
+        path: 'memorygame',
         description: 'My first RN project. A simple, but fully working memory game',
         categories: [REACT_NATIVE],
         external_links: {
@@ -58,11 +64,11 @@ export const projects = [
         },
         thumbnail: '',
         media: [
-            'divideaí.gif'
         ],
     },
     {
         name: 'Invoice generator',
+        path: 'invoicegenerator',
         description: 'Generate basic PDF invoices with Node',
         categories: [NODE],
         external_links: {
@@ -70,11 +76,11 @@ export const projects = [
         },
         thumbnail: '',
         media: [
-            'divideaí.gif'
         ],
     },
     {
         name: 'Static site shell script',
+        path: 'shellsite',
         description: 'A shell script for generating static html sites',
         categories: [SHELL],
         external_links: {
@@ -82,11 +88,11 @@ export const projects = [
         },
         thumbnail: '',
         media: [
-            'divideaí.gif'
         ],
     },
     {
         name: 'Background generator',
+        path: 'bggenerator',
         description: 'Tool for creating simple background images',
         categories: [REACT],
         external_links: {
@@ -94,11 +100,11 @@ export const projects = [
         },
         thumbnail: '',
         media: [
-            'divideaí.gif'
         ],
     },
     {
         name: 'Pokemon API',
+        path: 'pokemonapi',
         description: 'A simple RN app to fetch pokemon API',
         categories: [REACT_NATIVE],
         external_links: {
@@ -106,11 +112,11 @@ export const projects = [
         },
         thumbnail: '',
         media: [
-            'divideaí.gif'
         ],
     },
     {
         name: 'Discord bot',
+        path: 'discordbot',
         description: 'A bot that will send beecrowd exercises when asked to',
         categories: [NODE],
         external_links: {
@@ -118,11 +124,11 @@ export const projects = [
         },
         thumbnail: '',
         media: [
-            'divideaí.gif'
         ],
     },
     {
         name: 'Blaze crash scrap',
+        path: 'blazecrash',
         description: 'Web scraping with puppeteer for site blaze game values',
         categories: [WEB_SCRAPING],
         external_links: {
@@ -130,11 +136,11 @@ export const projects = [
         },
         thumbnail: '',
         media: [
-            'divideaí.gif'
         ],
     },
     {
         name: 'Portfolio website',
+        path: 'portfolio',
         description: 'Well.. you are here',
         categories: [REACT],
         external_links: {
@@ -142,11 +148,11 @@ export const projects = [
         },
         thumbnail: '',
         media: [
-            'divideaí.gif'
         ],
     },
     {
         name: 'Dashboard archery',
+        path: 'dashboardarchery',
         description: 'A system for archery clubs',
         categories: [REACT],
         external_links: {
@@ -154,11 +160,11 @@ export const projects = [
         },
         thumbnail: '',
         media: [
-            'divideaí.gif'
         ],
     },
     {
         name: 'Dashboard archery API',
+        path: 'dashboardarcheryapi',
         description: 'Rest API for my dashboard archery dashboard',
         categories: [REST_API, NODE],
         external_links: {
@@ -166,11 +172,11 @@ export const projects = [
         },
         thumbnail: '',
         media: [
-            'divideaí.gif'
         ],
     },
     {
         name: 'Chess',
+        path: 'chess',
         description: 'A multiplayer chess game to be used with socket.io',
         categories: [REACT],
         external_links: {
@@ -178,11 +184,11 @@ export const projects = [
         },
         thumbnail: '',
         media: [
-            'divideaí.gif'
         ],
     },
     {
         name: 'Chess server socket.io',
+        path: 'chessserver',
         description: 'Socketio server for chess project',
         categories: [SOCKETIO],
         external_links: {
@@ -190,11 +196,11 @@ export const projects = [
         },
         thumbnail: '',
         media: [
-            'divideaí.gif'
         ],
     },
     {
         name: 'Chat rooms',
+        path: 'chatrooms',
         description: 'Chat rooms with socketio',
         categories: [REACT, SOCKETIO],
         external_links: {
@@ -202,7 +208,6 @@ export const projects = [
         },
         thumbnail: '',
         media: [
-            'divideaí.gif'
         ],
     }
 ]
