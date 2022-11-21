@@ -39,6 +39,9 @@ export const projects = [
         },
         thumbnail: '',
         media: [
+            'alarm-1.png',
+            'alarm-2.png',
+            'alarm-3.png',
         ],
     },
     {
@@ -52,6 +55,8 @@ export const projects = [
         },
         thumbnail: '',
         media: [
+            'parser-1.png',
+            'parser-2.png',
         ],
     },
     {
@@ -64,6 +69,7 @@ export const projects = [
         },
         thumbnail: '',
         media: [
+            'memory-game-1.gif',
         ],
     },
     {
@@ -76,6 +82,7 @@ export const projects = [
         },
         thumbnail: '',
         media: [
+            'invoice-1.png',
         ],
     },
     {
@@ -88,6 +95,7 @@ export const projects = [
         },
         thumbnail: '',
         media: [
+            'shell-1.png',
         ],
     },
     {
@@ -100,6 +108,7 @@ export const projects = [
         },
         thumbnail: '',
         media: [
+            'bg-1.png',
         ],
     },
     {
@@ -112,6 +121,7 @@ export const projects = [
         },
         thumbnail: '',
         media: [
+            'pokemon-1.gif',
         ],
     },
     {
@@ -124,6 +134,7 @@ export const projects = [
         },
         thumbnail: '',
         media: [
+            'discordbot-1.png',
         ],
     },
     {
@@ -136,6 +147,7 @@ export const projects = [
         },
         thumbnail: '',
         media: [
+            'blaze-1.png',
         ],
     },
     {
@@ -148,6 +160,7 @@ export const projects = [
         },
         thumbnail: '',
         media: [
+            'portfolio-1.png',
         ],
     },
     {
@@ -160,6 +173,7 @@ export const projects = [
         },
         thumbnail: '',
         media: [
+            'dash-1.png',
         ],
     },
     {
@@ -172,6 +186,7 @@ export const projects = [
         },
         thumbnail: '',
         media: [
+            'dash-api-1.png',
         ],
     },
     {
@@ -184,6 +199,7 @@ export const projects = [
         },
         thumbnail: '',
         media: [
+            'chess-1.png',
         ],
     },
     {
@@ -196,6 +212,7 @@ export const projects = [
         },
         thumbnail: '',
         media: [
+            'chess-server-1.png',
         ],
     },
     {
@@ -208,6 +225,9 @@ export const projects = [
         },
         thumbnail: '',
         media: [
+            'rooms-1.png',
+            'rooms-2.png',
+            'rooms-3.png',
         ],
     }
 ]

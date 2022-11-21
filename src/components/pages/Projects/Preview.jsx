@@ -73,9 +73,12 @@ const MediaPlayer = ({ media, path }) => {
     const extension = mediaName.split('.');
     const type = extension[1] === 'mp4' ? 'video' : 'other';
   
-    setSelectedMedia({ mediaName, type});
-  
+    setSelectedMedia({ mediaName, type});  
   }, [media, index]);
+
+  useEffect(() => {
+    setIndex(0);
+  }, [media]);
 
   const handleMediaChange = action => {
     let newIndex = 0;
@@ -89,17 +92,18 @@ const MediaPlayer = ({ media, path }) => {
 
   return ( 
     <div className='flex px-8 items-center justify-evenly w-full h-3/5'>
+      
+      
       <button
+        className='min-w-[2em]'
         onClick={() => handleMediaChange('prev')}
       >
-        <FaChevronLeft className='hover:scale-125 transition-all duration-300' size={32}/>
+        { index !== MIN_INDEX &&
+          <FaChevronLeft className='hover:scale-125 transition-all duration-300' size={32}/>
+        }
       </button>
 
-      <a 
-        className='flex items-center justify-center h-full'
-        href={require(`../../../assets/projects/${path}/${mediaName}`)}
-        target="_blank" 
-        rel="noreferrer"
+      <div className='flex items-center justify-center h-full'
       >
       { 
         mediaName !== '' && (                             
@@ -109,20 +113,30 @@ const MediaPlayer = ({ media, path }) => {
               src={require(`../../../assets/projects/${path}/${mediaName}`)} 
               alt='not found'                
             />            
-        :        
-        <img 
-          className='max-h-full'            
-          src={require(`../../../assets/projects/${path}/${mediaName}`)} 
-          alt='not found' 
-        />         
+        :     
+        <a 
+          className='flex items-center justify-center h-full'
+          href={require(`../../../assets/projects/${path}/${mediaName}`) || ''}
+          target="_blank" 
+          rel="noreferrer"
+        >   
+          <img 
+            className='max-h-full'            
+            src={require(`../../../assets/projects/${path}/${mediaName}`)} 
+            alt='not found' 
+          />         
+        </a>
         )
       }
-      </a>
+      </div>
 
       <button
+        className='min-w-[2em]'
         onClick={() => handleMediaChange('next')}
       >
-        <FaChevronRight className='hover:scale-125 transition-all duration-300' size={32} />
+        { index !== MAX_INDEX &&         
+          <FaChevronRight className='hover:scale-125 transition-all duration-300' size={32} />
+        }
       </button>
     </div>
   )
