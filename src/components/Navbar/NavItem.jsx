@@ -11,7 +11,7 @@ const NavItem = ({ title, link="#", onChangePage }) => {
     <button className={`flex flex-1 items-center justify-center h-full 
       border-transparent border-b-2 ${hoverBorderColor}
       transition-all duration-300`}
-      onClick={() => onChangePage(title) }
+      onClick={() => onChangePage(title.replace(' ', '')) }
     >        
       {title || 'empty'}        
     </button>

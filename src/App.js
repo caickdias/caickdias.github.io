@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/pages/Home';
 import Projects from './components/pages/Projects/Projects';
 import Skills from './components/pages/Skills/Skills';
+import AboutMe from './components/pages/AboutMe';
 import SocialMediaBar from './components/SocialMediaBar/SocialMediaBar';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      setCurrentPage('home');
+      setCurrentPage('aboutme');
     }, 300);
   }, []);
 
@@ -40,6 +41,7 @@ function App() {
         <Home visible={currentPage === 'home'} />
         <Projects visible={currentPage === 'projects'} />
         <Skills visible={currentPage === 'skills'} />
+        <AboutMe visible={currentPage === 'aboutme'} />
       </div>
     </div>
   );
