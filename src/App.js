@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      setCurrentPage('aboutme');
+      setCurrentPage('home');
     }, 300);
   }, []);
 
