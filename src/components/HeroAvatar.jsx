@@ -74,22 +74,28 @@ const HeroAvatar = () => {
             })
           }}          
           className={`absolute bottom-[7rem] top-0 right-32 left-0 m-auto 
-            w-96 h-96 
-            overflow-hidden 
-            rounded-full caick
+            w-96 h-96             
+            overflow-hidden  
+            rounded-b-full caick
             scale-75 xl:scale-100
         `}>            
             <div className={`absolute bottom-[7rem] top-0 right-32 left-0 
               w-96 h-96 
               overflow-hidden transition-all duration-300 
-              rounded-full caick
+              rounded-full caick 
               border-r-8 ${borderColor} z-20 border-dotted scale-75 xl:scale-100`}
               style={{
                 transform: `rotate(${rotation}deg)`
               }}
             >
-
             </div>
+
+            
+            <div className='absolute float-right top-0 bottom-0 left-30 w-40 h-fit z-50 p-2
+              text-black font-bold bg-white 
+                border-2 border-black rounded-t-xl rounded-bl-xl'>
+                Hello there! I'd be pleased to get to know your name!
+              </div>
 
             <button className='absolute -top-6 bottom-0 left-0 -right-4 m-auto 
               z-30 w-[1.1rem] h-[1.1rem] tattoo 
@@ -98,7 +104,7 @@ const HeroAvatar = () => {
             >              
             </button>
 
-            
+
               <img
                 style={{ opacity: `${bgColor === 'bg-red-500' ? 100 : 0}` }} 
                 className='absolute -bottom-0 top-0 right-0 left-0 m-auto             
