@@ -91,11 +91,7 @@ const HeroAvatar = () => {
             </div>
 
             
-            <div className='absolute float-right top-0 bottom-0 left-30 w-40 h-fit z-50 p-2
-              text-black font-bold bg-white 
-                border-2 border-black rounded-t-xl rounded-bl-xl'>
-                Hello there! I'd be pleased to get to know your name!
-              </div>
+           
 
             <button className='absolute -top-6 bottom-0 left-0 -right-4 m-auto 
               z-30 w-[1.1rem] h-[1.1rem] tattoo 
