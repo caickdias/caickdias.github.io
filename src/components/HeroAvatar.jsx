@@ -4,6 +4,7 @@ import AppContext from '../context/AppContext';
 
 import '../App.css';
 import ColorPicker from './ColorPicker';
+import CaickTalks from './CaickTalks';
 
 
 const HeroAvatar = () => {
@@ -15,8 +16,6 @@ const HeroAvatar = () => {
   const [globalCoords, setGlobalCoords] = useState({ x:0, y:0 });
   const [imageCoords, setImageCoords] = useState({ x:0, y:0 });  
   const [rotation, setRotation] = useState(90);
-
-
 
   const handleThemeChange = color => {
     setShowColorPicker(false);
@@ -89,9 +88,8 @@ const HeroAvatar = () => {
               }}
             >
             </div>
-
             
-           
+            <CaickTalks />
 
             <button className='absolute -top-6 bottom-0 left-0 -right-4 m-auto 
               z-30 w-[1.1rem] h-[1.1rem] tattoo 
