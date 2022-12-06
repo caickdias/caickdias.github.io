@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 
-import AppContext from '../context/AppContext'
+import AppContext from '../../context/AppContext'
+import GetName from './GetName';
 
 const CaickTalks = () => {
 
@@ -12,15 +13,7 @@ const CaickTalks = () => {
     console.log(showCaickTalks)
   }, []);
 
-  const handleUsernameChange = event => {
-    setUsername(event.target.value);
-  }
-
-  const handleKeyDown = event => {
-    if(event.key === 'Enter'){
-      alert('opa')
-    }
-  }
+  
 
   return (
     <div className='absolute float-right top-0 bottom-0 left-30 w-40 h-fit z-50 p-2
@@ -29,15 +22,9 @@ const CaickTalks = () => {
       transition-all duration-500'
       style={{ opacity: `${isVisible}`}}
     >          
-        
-        Hello there! I'd be pleased to know your name:
-        
-        <input 
-            className='w-full border-b-2 border-gray-500' 
-            type="text"
-            onChange={handleUsernameChange}
-            onKeyDown={handleKeyDown}
-        ></input>
+
+      <GetName />    
+    
     </div>
   )
 }

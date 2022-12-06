@@ -6,7 +6,6 @@ import '../App.css';
 import ColorPicker from './ColorPicker';
 import CaickTalks from './CaickTalks';
 
-
 const HeroAvatar = () => {
 
   const { store, setTheme } = useContext(AppContext);
