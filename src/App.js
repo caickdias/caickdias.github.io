@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 
 import './App.css';
+
+import AppContext from './context/AppContext';
 
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/pages/Home';
@@ -11,12 +13,17 @@ import SocialMediaBar from './components/SocialMediaBar/SocialMediaBar';
 
 function App() {
   
+  const { setShowCaickTalks } = useContext(AppContext);
+
   const [currentPage, setCurrentPage] = useState('');
 
   useEffect(() => {
     setTimeout(() => {
-      setCurrentPage('aboutme');
+      setCurrentPage('home');
     }, 300);
+    setTimeout(() => {
+      setShowCaickTalks(true);
+    }, 2000);
   }, []);
 
   const handlePageChange = page => {

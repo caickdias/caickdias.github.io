@@ -19,7 +19,7 @@ const Navbar = ({ onChangePage }) => {
         <div className='flex flex-1 items-center justify-evenly h-16 transition-all duration-300'>
             <NavItem onChangePage={onChangePage} title="projects" />
             <NavItem onChangePage={onChangePage} title="skills" />            
-            <NavItem title="blog" />
+            <NavItem title="blog" link="https://caickdias.github.io/blog/" />
             <NavItem onChangePage={onChangePage} title="about me" />
         </div>
     </div>

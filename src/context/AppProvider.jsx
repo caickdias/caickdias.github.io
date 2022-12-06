@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useReducer, useState } from 'react';
 
 import AppContext from './AppContext';
 import { AppReducer } from '../reducer/AppReducer';
@@ -18,6 +18,8 @@ const initialState = {
 const AppProvider = ({ children }) => {
     
     const [store, dispatch] = useReducer(AppReducer, initialState);    
+    const [username, setUsername] = useState('');
+    const [showCaickTalks, setShowCaickTalks] = useState(false);
 
     const setTheme = color => {
         dispatch({ type: SET_THEME, payload: { color } })
@@ -25,7 +27,9 @@ const AppProvider = ({ children }) => {
 
     return (
         <AppContext.Provider value={{ 
-                store, setTheme
+                store, setTheme,
+                username, setUsername,
+                showCaickTalks, setShowCaickTalks
             }}>
             { children }
         </AppContext.Provider>

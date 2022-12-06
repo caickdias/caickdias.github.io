@@ -18,7 +18,7 @@ const Home = ({ visible }) => {
         >
             
             <div 
-                className='flex flex-1 flex-col justify-center mb-36 text-3xl transition-all duration-500'
+                className='flex flex-1 flex-col items-center mb-36 text-3xl transition-all duration-500'
                 style={{ transform: `translate(-${isVisible*20}px, 0)` }}
             >
                 <div className='w-5/6 text-right'>

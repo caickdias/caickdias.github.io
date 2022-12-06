@@ -4,7 +4,7 @@ import AppContext from '../context/AppContext';
 
 import '../App.css';
 import ColorPicker from './ColorPicker';
-
+import CaickTalks from './CaickTalks';
 
 const HeroAvatar = () => {
 
@@ -15,8 +15,6 @@ const HeroAvatar = () => {
   const [globalCoords, setGlobalCoords] = useState({ x:0, y:0 });
   const [imageCoords, setImageCoords] = useState({ x:0, y:0 });  
   const [rotation, setRotation] = useState(90);
-
-
 
   const handleThemeChange = color => {
     setShowColorPicker(false);
@@ -74,22 +72,23 @@ const HeroAvatar = () => {
             })
           }}          
           className={`absolute bottom-[7rem] top-0 right-32 left-0 m-auto 
-            w-96 h-96 
-            overflow-hidden 
-            rounded-full caick
+            w-96 h-96             
+            overflow-hidden  
+            rounded-b-full caick
             scale-75 xl:scale-100
         `}>            
             <div className={`absolute bottom-[7rem] top-0 right-32 left-0 
               w-96 h-96 
               overflow-hidden transition-all duration-300 
-              rounded-full caick
+              rounded-full caick 
               border-r-8 ${borderColor} z-20 border-dotted scale-75 xl:scale-100`}
               style={{
                 transform: `rotate(${rotation}deg)`
               }}
             >
-
             </div>
+            
+            <CaickTalks />
 
             <button className='absolute -top-6 bottom-0 left-0 -right-4 m-auto 
               z-30 w-[1.1rem] h-[1.1rem] tattoo 
@@ -98,7 +97,7 @@ const HeroAvatar = () => {
             >              
             </button>
 
-            
+
               <img
                 style={{ opacity: `${bgColor === 'bg-red-500' ? 100 : 0}` }} 
                 className='absolute -bottom-0 top-0 right-0 left-0 m-auto             

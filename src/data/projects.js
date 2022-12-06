@@ -229,5 +229,5 @@ export const projects = [
             'rooms-2.png',
             'rooms-3.png',
         ],
-    }
+    },
 ]
